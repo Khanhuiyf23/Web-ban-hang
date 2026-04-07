@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 250 252;
+  --fg: 15 23 42;
+  --accent: 99 102 241;
+}
+
+.dark {
+  --bg: 2 6 23;
+  --fg: 226 232 240;
+  --accent: 56 189 248;
+}
+
+body {
+  @apply bg-bg text-fg antialiased;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent;
+}
+
+.glass {
+  @apply border border-white/20 bg-white/70 backdrop-blur-lg dark:bg-slate-900/70;
+}
